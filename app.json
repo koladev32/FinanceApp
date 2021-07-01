@@ -1,0 +1,12 @@
+{
+  "name": "FinanceApp",
+  "displayName": "FinanceApp",
+  "expo": {
+    "name": "FinanceApp",
+    "slug": "FinanceApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
