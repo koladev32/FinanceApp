@@ -13,7 +13,7 @@ const Layout: React.FC = ({ children }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f8fafb',
+        backgroundColor: '#fff',
     },
 });
 

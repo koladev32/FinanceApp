@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/Home';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
+import {icon, primary1} from "../helpers/colors";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -15,27 +16,27 @@ const MyTabs = () => {
                     let iconName: string;
                     let colorName: string;
                     if (route.name === 'Home') {
-                        iconName = 'home';
-                        colorName = !focused ? '#808080' : '#138dff';
+                        iconName = 'ios-home-sharp';
+                        colorName = !focused ? icon : primary1;
                     } else if (route.name === 'Profile') {
-                        iconName = 'user';
-                        colorName = !focused ? '#808080' : '#138dff';
+                        iconName = 'md-person';
+                        colorName = !focused ? icon : primary1;
                     } else if (route.name === 'Chart') {
-                        iconName = 'piechart';
-                        colorName = !focused ? '#808080' : '#138dff';
+                        iconName = 'stats-chart';
+                        colorName = !focused ? icon : primary1;
                     } else if (route.name === 'Wallet') {
-                        iconName = 'wallet';
-                        colorName = !focused ? '#808080' : '#138dff';
+                        iconName = 'ios-card';
+                        colorName = !focused ? icon : primary1;
                     }
 
                     // You can return any component that you like here!
-                    return <Icon name={iconName} size={24} color={colorName} type={'antdesign'} />;
+                    return <Icon name={iconName} color={colorName} type={'ionicon'} />;
                 },
             })}
             tabBarOptions={{
-                activeTintColor: '#138dff',
-                inactiveTintColor: 'gray',
-                style: { borderTopColor: 'white' },
+                activeTintColor: primary1,
+                inactiveTintColor: icon,
+                style: { borderTopColor: 'white', paddingVertical: '3%' },
             }}
         >
             <Tab.Screen options={{ title: `` }} name="Home" component={HomeScreen} />
